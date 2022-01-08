@@ -10,10 +10,13 @@
     "build": "rimraf dist && webpack --config webpack.prod.js",
     "dev-default": "webpack serve",
     "build-default": "webpack",
-    "lint": "eslint .",
+    "lint": "eslint app public",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,json,css,scss,html,md}' --config ./.prettierrc",
-    "regenerate-package-lock": "npm cache clean --force && rimraf node_modules && rm package-lock.json && npm install"
+    "regenerate-package-lock": "npm cache clean --force && rimraf node_modules && rm package-lock.json && npm install",
+    "sonar": "node sonarcube.js",
+    "downloadSonar": "docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube",
+    "startSonar": "docker start sonarqube"
   },
   "husky": {
     "hooks": {
@@ -57,6 +60,7 @@
     "prettier": "^2.5.1",
     "sass": "^1.47.0",
     "sass-loader": "^12.4.0",
+    "sonarqube-scanner": "^2.8.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
