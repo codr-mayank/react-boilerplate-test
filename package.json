@@ -26,8 +26,7 @@
       "eslint --fix"
     ],
     "*.{json,md,html}": [
-      "prettier --write",
-      "eslint --fix"
+      "prettier --write"
     ]
   },
   "author": "",
