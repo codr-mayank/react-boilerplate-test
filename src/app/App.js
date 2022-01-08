@@ -1,5 +1,15 @@
 import React from 'react';
 
-const App = () => <h1 className="helloWorld">Hello World!</h1>;
+/**
+ * App: main component of project
+ * @returns
+ */
+const App = () => {
+  return (
+    <div>
+      <h1 className="helloWorld">Hello World!</h1>
+    </div>
+  );
+};
 
 export default App;
