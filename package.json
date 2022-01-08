@@ -21,11 +21,13 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "eslint --quiet --fix"
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
     ],
     "*.{json,md,html}": [
-      "prettier --write"
+      "prettier --write",
+      "eslint --fix"
     ]
   },
   "author": "",

@@ -6,3 +6,6 @@ dist/*
 
 # webpack configs
 webpack.*.js
+
+# package.json
+package*.json
