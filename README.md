@@ -6,6 +6,7 @@ babel,
 webpack,
 eslint,
 prettier,
+husky,
 sonarcube-scanner
 
 Note: This boilerplate is of production grade and using latest related technologies.
