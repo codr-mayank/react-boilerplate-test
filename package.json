@@ -12,7 +12,7 @@
     "build-default": "webpack",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,json,css,html,md}' --config ./.prettierrc",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,json,css,scss,html,md}' --config ./.prettierrc",
     "regenerate-package-lock": "npm cache clean --force && rimraf node_modules && rm package-lock.json && npm install"
   },
   "husky": {
@@ -21,9 +21,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,html,md}": [
+    "*.{js,jsx,ts,tsx}": [
       "prettier --write",
       "eslint --quiet --fix"
+    ],
+    "*.{json,css,scss,html,md}": [
+      "prettier --write"
     ]
   },
   "author": "",
