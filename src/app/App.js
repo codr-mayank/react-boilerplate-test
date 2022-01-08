@@ -5,9 +5,12 @@ import React from 'react';
  * @returns
  */
 const App = () => {
+  const displayLine = 'Hello';
+  const displayName = 'World';
+
   return (
     <div>
-      <h1 className="helloWorld">Hello World!</h1>
+      <h1 className="helloWorld">{displayLine + ' ' + displayName}</h1>
     </div>
   );
 };
